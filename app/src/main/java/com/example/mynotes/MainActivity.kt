@@ -20,8 +20,6 @@ import com.example.mynotes.ui.main.MainFragment
 import com.example.mynotes.ui.main.MainViewModel
 import com.example.mynotes.ui.main.MainViewModelFactory
 
-
-
 class MainActivity : AppCompatActivity(), MainFragment.MainFragmentInteractionListener {
     private lateinit var binding: MainActivityBinding
     private lateinit var viewModel: MainViewModel
@@ -134,7 +132,6 @@ class MainActivity : AppCompatActivity(), MainFragment.MainFragmentInteractionLi
             val insertedText = plainText.text.toString()
 
             sharedPreferences.edit().putString(viewModel.list.name,insertedText).apply()
-
 
             title = resources.getString(R.string.app_name)
             supportFragmentManager.commit {

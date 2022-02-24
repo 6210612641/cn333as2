@@ -27,8 +27,6 @@ class ListDetailActivity : AppCompatActivity() {
         binding = ListDetailActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-
         viewModel.list = intent.getParcelableExtra(MainActivity.INTENT_LIST_KEY)!!
         title = viewModel.list.name
 
@@ -37,8 +35,6 @@ class ListDetailActivity : AppCompatActivity() {
                 .replace(R.id.container, ListDetailFragment.newInstance())
                 .commitNow()
         }
-
-
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
@@ -58,7 +54,6 @@ class ListDetailActivity : AppCompatActivity() {
         val insertedText = plainText.text.toString()
         sharedPreferences = getSharedPreferences("", Context.MODE_PRIVATE)
         sharedPreferences.edit().putString(viewModel.list.name,insertedText).apply()
-
 
         super.onBackPressed()
     }

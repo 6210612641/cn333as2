@@ -7,7 +7,6 @@ import com.example.mynotes.models.TaskList
 class MainViewModel(private val sharedPreferences: SharedPreferences) : ViewModel() {
     lateinit var onTaskAdded: () -> Unit
     lateinit var list: TaskList
-
     lateinit var onListAdded: (() -> Unit)
 
     val lists: MutableList<TaskList> by lazy {
