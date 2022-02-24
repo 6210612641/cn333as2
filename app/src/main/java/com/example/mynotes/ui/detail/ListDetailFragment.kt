@@ -39,10 +39,10 @@ class ListDetailFragment : Fragment() {
             .get(MainViewModel::class.java)
         val list: TaskList? = arguments?.getParcelable(MainActivity.INTENT_LIST_KEY)
         list?.let {
-            viewModel.list = list
+            viewModel.note = list
             requireActivity().title = list.name
         }
-        val adapter = ListItemsRecyclerViewAdapter(viewModel.list)
+        val adapter = ListItemsRecyclerViewAdapter(viewModel.note)
 
         viewModel.onTaskAdded = {
             adapter.notifyDataSetChanged()

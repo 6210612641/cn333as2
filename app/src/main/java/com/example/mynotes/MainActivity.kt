@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity(), MainFragment.MainFragmentInteractionLi
             plainText = findViewById(R.id.plainText)
             val insertedText = plainText.text.toString()
 
-            sharedPreferences.edit().putString(viewModel.list.name,insertedText).apply()
+            sharedPreferences.edit().putString(viewModel.note.name,insertedText).apply()
 
             title = resources.getString(R.string.app_name)
             supportFragmentManager.commit {
